@@ -1,0 +1,212 @@
+/* Reseteo básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Efecto suave al hacer clic en el menú */
+}
+
+/* Variables de color para mantener consistencia */
+:root {
+    --color-fondo: #2c2c2c;
+    --color-texto: #e0e0e0;
+    --color-primario: #C5B2D7; /* Morado primario para consistencia con el degradado */
+    --color-secundario: #1e1e1e;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Navegación */
+header {
+    background: linear-gradient(135deg, #C5B2D7 0%, #312140 100%);
+    padding: 1rem 5%;
+    position: sticky; /* El menú se queda arriba al hacer scroll */
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primario);
+}
+
+/* Secciones Generales */
+.seccion {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.foto-perfil {
+width:150px;
+height: 170px;
+border-radius: 50%;
+object-fit: cover;
+margin: 1.5rem auto;
+}
+
+.fondo-oscuro {
+    background-color: var(--color-secundario);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-primario);
+}
+
+/* Hero Section (Inicio) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: var(--color-texto);
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: #a0a0a0;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #312140;
+}
+
+/* Grillas para Cards (Flexbox) */
+.grid-habilidades, .grid-proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que bajen de línea en pantallas pequeñas */
+}
+
+.card, .proyecto-card {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.proyecto-card {
+    background-color: var(--color-fondo);
+}
+
+.card:hover, .proyecto-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primario);
+}
+
+/* Footer */
+footer {
+    background-color: #0b1120;
+    padding: 4rem 10% 2rem 10%;
+    text-align: center;
+    border-top: 1px solid #334155;
+}
+
+.footer-content h2 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primario);
+}
+
+.footer-content p {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid #334155;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    transform: translateY(-3px);
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #1e293b;
+    margin-bottom: 1.5rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #64748b !important;
+}
